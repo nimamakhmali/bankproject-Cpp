@@ -45,3 +45,20 @@ class account
 
  }
 };
+void menu();
+void write_account();
+void display_sp();
+void modify_account();
+void delete_account();
+void display_all();
+void deposit_withdraw();
+void Titr();
+
+int main()
+{
+  Titr();
+  menu();
+  cout<<endl;
+ cout << "                        Nima Bank"<<"\n\n";
+ return 0;
+}
