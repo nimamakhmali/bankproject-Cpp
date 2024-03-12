@@ -137,9 +137,71 @@ void english_menu()
 }
 void persian_menu()
 {
+  int num, ch;	
 	do
 	{
-	}while(true);
+		cout<<endl;
+		cout<<"\n\n\n\t   MAIN MENU                                                                                     " ;
+		cout<<"\n\n\t  EJAD HESAB .01                              " ;
+		cout<<"\n\n\t  SEPORDE(AFZAYESH) VAJH .02                  " ;
+		cout<<"\n\n\t  BARDASHT(KAHESH) VAJH .03                   " ;
+		cout<<"\n\n\t  ESTELAM MOJODI .04                          " ;
+		cout<<"\n\n\t  FEHREST HESAB HA .05                        " ; 
+		cout<<"\n\n\t  BASTAN HESAB .06                            " ;
+		cout<<"\n\n\t  ESLAH HESAB .07                             " ;
+		cout<<"\n\n\t  Khoroj .08                                  " ;
+		cout<<"\n\n\n\t Select Your Option (1-8) ";
+		cin>>ch;
+		cout<<endl;
+
+		switch(ch)
+		{
+		case 1:
+
+			break;
+
+		case 2:
+
+			break;
+
+		case 3:
+
+			break;
+
+		case 4:
+
+			break;
+
+		case 5:
+		
+			break;
+
+		case 6:
+
+			break;
+
+		case 7:
+
+
+			break;
+
+		case 8:
+
+			break;
+
+		default:
+		    cout<<"Select Your Option (1-8): ";
+            break;
+		}
+
+		cout << "\n\n" << "--------------------------" <<endl;
+		system("Pause");
+
+		system("CLS");
+
+	}while(ch!=8);
+
+
 }
 
 
