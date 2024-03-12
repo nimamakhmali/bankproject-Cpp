@@ -1,15 +1,15 @@
 #include <iostream>
 #include <conio.h>
 using namespace std;
-class account 
+class Account 
 {
  private:
- int acno;
+ int accountNumber;
  char name[50];
  int deposit;
  char type;
  public:
- void create_account(int acno)
+ void create_account(int accountNumber)
  {
 
  }
