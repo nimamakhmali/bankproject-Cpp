@@ -1,14 +1,19 @@
-#include <iostream>
+#include<iostream>
+#include<fstream>
+#include<ctype.h>
+#include<iomanip>
+#include<stdio.h>
 #include <conio.h>
 using namespace std;
-class Account 
+
+class Account
 {
- private:
- int accountNumber;
- char name[50];
- int deposit;
- char type;
- public:
+private:
+	int accountNumber;
+	char name[50];
+	int deposit;
+	char type;
+public:
 	void create_account(int accno)
 	{
 		accountNumber = accno;
@@ -22,7 +27,8 @@ class Account
 		cin>>deposit;
 		cout<<"\n\n\n === Account Created... ===";
 	}	//function to get data from user
- 	void show_account()
+
+	void show_account()
 	{
 		cout<<"\nAccount No. : "<<accountNumber;
 		cout<<"\nAccount Holder Name : ";
@@ -30,34 +36,44 @@ class Account
 		cout<<"\nType of Account : "<<type;
 		cout<<"\nBalance amount : "<<deposit;
 	}	//function to show data on screen
- void modify()
- {
 
- }
- void dep()
- {
+	void modify()
+	{
+		cout<<"\nThe Account No."<<accountNumber;
+		cout<<"\n\nEnter The Name of The Account Holder : ";
+		cin.ignore();
+		gets(name);
+		cout<<"\nEnter Type of The Account (Checking/Saving) : ";
+		cin>>type;
+		type=toupper(type);
+		cout<<"\nEnter The amount : ";
+		cin>>deposit;
+	}   //function to get new data from user
 
- }
- void draw()
- {
+	void dep(int x){	//function to accept amount and add to balance amount
+		deposit+=x;
+	}
 
- }
- void report()
- {
+	void draw(int x){	//function to accept amount and subtract from balance amount
+		deposit-=x;
+	}
 
- }
- int retacno()
- {
+	void report(){	//function to show data in tabular format
+		cout<<accountNumber<<setw(14)<<name<<setw(15)<<type<<setw(10)<<deposit<<endl;
+	}
 
- }
- int retdeposit()
- {
+	int retaccountNumber(){	//function to return Account number
+		return accountNumber;
+	}
 
- }
- char rettype()
- {
+	int retdeposit(){	//function to return balance amount
+		return deposit;
+	}
 
- }
+	char rettype(){	//function to return type of Account
+		return type;
+	}
+
 };
 
 void welcome();
