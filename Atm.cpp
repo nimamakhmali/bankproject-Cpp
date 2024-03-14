@@ -9,14 +9,27 @@ class Account
  int deposit;
  char type;
  public:
- void create_account(int accountNumber)
- {
-
- }
- void show_account()
- {
-
- }
+	void create_account(int accno)
+	{
+		accountNumber = accno;
+		cout<<"\nEnter The Name of The Account Holder : ";
+		cin.ignore();
+		gets(name);
+		cout<<"\nEnter Type of The Account (C/S) : ";
+		cin>>type;
+		type=toupper(type);
+		cout<<"\nEnter The amount: ";
+		cin>>deposit;
+		cout<<"\n\n\n === Account Created... ===";
+	}	//function to get data from user
+ 	void show_account()
+	{
+		cout<<"\nAccount No. : "<<accountNumber;
+		cout<<"\nAccount Holder Name : ";
+		cout<<name;
+		cout<<"\nType of Account : "<<type;
+		cout<<"\nBalance amount : "<<deposit;
+	}	//function to show data on screen
  void modify()
  {
 
